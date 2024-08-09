@@ -8,6 +8,6 @@ int main ()
     int x,k;
     cin >> x >> k;
 
-    cout << (x & (1 << k)) << endl;
+    cout << (x ^ (1 << k)) << endl;
 
 }
