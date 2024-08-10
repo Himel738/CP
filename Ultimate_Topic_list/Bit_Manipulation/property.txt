@@ -1,1 +1,7 @@
 
+No of set bits in A = X;
+No of set bits in B = Y;
+No of set bits in (a ^ b) = z;
+
+if(x+y) is even z is even
+if(x+y) is odd z is odd

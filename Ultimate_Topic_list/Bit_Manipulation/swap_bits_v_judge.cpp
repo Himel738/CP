@@ -5,35 +5,47 @@ int main ()
 {
     int t;
     cin >> t;
-
+    int r = t;
     while(t--)
     {
-        int x,y,z,j,p=0;
+        int x,y,p,z,count = 0,count2=0;
         cin >> x;
-        y=1;
-        z= x;
-        j=1;
+        p = x;
+        z = __builtin_popcount(x);
+
 
         for(int i = 2; i > 0; i = i << 2)
         {
-            if(y > z)
+            if(x==0)
             {
                 break;
             }
-            if((x & i)==(x & (i >> 1)))
-            {
-                y = y << (j);
 
+            if((p & i) != 0)
+            {
+                count++;
+            }
+            if((p & (i >> 1)) != 0)
+            {
+                count++;
+            }
+
+            if ((((x & i) != 0) && ((x & (i >> 1)) != 0)) || (((x & i) == 0) && ((x & (i >> 1)) == 0)))
+            {
                 continue;
             }
+
             else
             {
                 x =  (x ^ i);
                x = (x ^ (i >> 1));
-               y= y << (j);
+            }
+            if(count == z)
+            {
+                break;
             }
 
-            j+=2;
+
         }
         cout << x << endl;
     }

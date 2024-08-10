@@ -8,5 +8,5 @@ int main ()
 
     x = (10 ^ 5 ^ x);
 
-    cout << x;
+    cout << x << endl;
 }
