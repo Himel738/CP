@@ -1,6 +1,4 @@
 
-
-
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -11,8 +9,17 @@ void recursion(int n)
         return;
     }
     else
-        cout << n << endl;
+    {
+        if(n==1)
+        {
+            cout << n << endl;
+        }
+        else
+        {
+            cout << n << " ";
+        }
         recursion(n-1);
+    }
 }
 
 int main ()
